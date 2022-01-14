@@ -7,9 +7,14 @@ process.stdin.on('data', (data) => {
   // console.log(cmd)
   const cmd = data.toString().trim() // remove the newline
 
+  const pwd = require('./pwd');
+  
   if (cmd === 'pwd') {
-    process.stdout.write(process.cwd())
-  }
+
+pwd();
+}
+
+
   // process.stdout.write('You typed: ' + cmd)
   process.stdout.write('\nprompt > ')
 })
